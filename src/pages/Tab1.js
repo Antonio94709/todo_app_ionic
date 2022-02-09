@@ -1,12 +1,8 @@
 import {
   IonApp,
-  IonRouterOutlet,
-  setupIonicReact,
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonInput,
-  IonLabel,
   IonItem,
   IonContent,
   IonCol,
@@ -15,15 +11,8 @@ import {
   IonButton,
   IonList,
   IonButtons,
-  IonTabBar,
-  IonTabButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
+
 import "./Tab1.css";
 import { useState } from "react";
 import FetchAPI from "../components/API/FectAPI";
@@ -50,7 +39,7 @@ const Tab1 = () => {
   }
 
   function addItemFu() {
-    if (item != "" && !tasks.includes(item)) {
+    if (item !== "" && !tasks.includes(item)) {
       axios.post("http://localhost:4000/addTask", {
         task: item,
       });
