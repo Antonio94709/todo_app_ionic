@@ -52,7 +52,7 @@ const Tab1 = () => {
       // let temp = tasks;
       // temp.push(item);
       // setTask(temp);
-      // setItem("");
+      setItem("");
     }
   }
 
