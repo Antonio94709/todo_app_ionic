@@ -24,13 +24,17 @@ const Tab1 = () => {
   const [item, setItem] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:4000/tasks").then((response) => {
+    axios.get("http://localhost:5000/get").then((response) => {
       setTask(response.data);
     });
+    // axios.get("http://localhost:4000/tasks").then((response) => {
+    //   setTask(response.data);
+    // });
   });
 
-  function removeItemFu(taskid) {
-    axios.delete(`http://localhost:4000/deleteTask/${taskid}`);
+  function removeItemFu(id) {
+    axios.delete(`http://localhost:5000/delete/${id}`);
+    // axios.delete(`http://localhost:4000/deleteTask/${taskid}`);
     // setTask(
     //   tasks.filter((task) => {
     //     return task != taskName;
@@ -40,8 +44,10 @@ const Tab1 = () => {
 
   function addItemFu() {
     if (item !== "" && !tasks.includes(item)) {
-      axios.post("http://localhost:4000/addTask", {
-        task: item,
+      axios.post("http://localhost:5000/insert", {
+        todotask: item,
+        // axios.post("http://localhost:4000/addTask", {
+        //   task: item,
       });
       // let temp = tasks;
       // temp.push(item);
@@ -87,15 +93,15 @@ const Tab1 = () => {
             return (
               <div className="text-center">
                 <IonItem
-                  key={tasks.taskid}
+                  key={tasks._id}
                   className="w-full border-t p-3 text-black text-xl"
                 >
-                  {tasks.task}
+                  {tasks.todotask}
                 </IonItem>
                 <IonButton
                   type="button"
                   onClick={() => {
-                    removeItemFu(tasks.taskid);
+                    removeItemFu(tasks._id);
                   }}
                 >
                   Remove Task
