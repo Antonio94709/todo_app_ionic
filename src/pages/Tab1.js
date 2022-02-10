@@ -24,7 +24,7 @@ const Tab1 = () => {
   const [item, setItem] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/get").then((response) => {
+    axios.get("https://todoappdatabase.herokuapp.com//get").then((response) => {
       setTask(response.data);
     });
     // axios.get("http://localhost:4000/tasks").then((response) => {
@@ -33,7 +33,7 @@ const Tab1 = () => {
   });
 
   function removeItemFu(id) {
-    axios.delete(`http://localhost:5000/delete/${id}`);
+    axios.delete(`https://todoappdatabase.herokuapp.com//delete/${id}`);
     // axios.delete(`http://localhost:4000/deleteTask/${taskid}`);
     // setTask(
     //   tasks.filter((task) => {
@@ -44,7 +44,7 @@ const Tab1 = () => {
 
   function addItemFu() {
     if (item !== "" && !tasks.includes(item)) {
-      axios.post("http://localhost:5000/insert", {
+      axios.post("https://todoappdatabase.herokuapp.com//insert", {
         todotask: item,
         // axios.post("http://localhost:4000/addTask", {
         //   task: item,
