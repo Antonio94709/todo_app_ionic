@@ -18,6 +18,7 @@ import { useState } from "react";
 import FetchAPI from "../components/API/FectAPI";
 import axios from "axios";
 import { useEffect } from "react";
+import NavHeader from "../components/NavHeader";
 
 const Tab1 = () => {
   const [tasks, setTask] = useState([]);
@@ -26,7 +27,7 @@ const Tab1 = () => {
   useEffect(() => {
     axios.get("https://todoappdatabase.herokuapp.com/get").then((response) => {
       setTask(response.data);
-    });
+    }, []);
     // axios.get("http://localhost:4000/tasks").then((response) => {
     //   setTask(response.data);
     // });
@@ -58,13 +59,7 @@ const Tab1 = () => {
 
   return (
     <IonApp>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Todo app with ionic</IonTitle>
-          <IonButtons></IonButtons>
-        </IonToolbar>
-      </IonHeader>
-
+      <NavHeader />
       <IonContent className=" mx-auto text-center">
         <IonGrid>
           <IonRow>
