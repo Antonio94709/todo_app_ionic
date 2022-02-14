@@ -17,8 +17,6 @@ import { useState } from "react";
 import FetchAPI from "../components/API/FectAPI";
 import axios from "axios";
 import { useEffect } from "react";
-import NavHeader from "../components/NavHeader";
-import LisTable from "../components/LIstTable";
 
 const Tab1 = () => {
   const [tasks, setTask] = useState([]);
@@ -59,9 +57,8 @@ const Tab1 = () => {
 
   return (
     <IonApp>
-      <NavHeader />
       <IonContent className=" mx-auto text-center">
-        <IonCard>
+        <IonCard className="p-4">
           <IonGrid>
             <IonRow>
               <IonCol>
@@ -80,7 +77,12 @@ const Tab1 = () => {
             </IonRow>
             <IonRow>
               <IonCol>
-                <IonButton onClick={addItemFu}>Add Task</IonButton>
+                <IonButton
+                  onClick={addItemFu}
+                  className="bg-indigo-700 aspect-square"
+                >
+                  Add Task
+                </IonButton>
               </IonCol>
             </IonRow>
           </IonGrid>

@@ -12,7 +12,7 @@ import FetchSingleAPI from "../components/API/FetchSingleAPI";
 const Tab2 = () => {
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader className="text-center">
         <IonToolbar>
           <IonTitle>Article</IonTitle>
         </IonToolbar>
