@@ -9,6 +9,8 @@ import {
   setupIonicReact,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
+import { IoHomeSharp, IoReaderSharp, IoSettingsSharp } from "react-icons/io5";
+import "flowbite";
 
 import Tab1 from "./pages/Tab1";
 import Tab2 from "./pages/Tab2";
@@ -56,12 +58,15 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
+            <IoHomeSharp />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
+            <IoReaderSharp />
             <IonLabel>Article</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
+            <IoSettingsSharp />
             <IonLabel>Settings</IonLabel>
           </IonTabButton>
         </IonTabBar>

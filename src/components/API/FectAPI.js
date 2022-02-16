@@ -31,9 +31,9 @@ function FetchAPI() {
           </IonCardTitle>
         </IonCardHeader>
 
-        <IonCardContent className="grid grid-cols-4 gap-4">
+        <IonCardContent className="">
           {data.map((data) => (
-            <IonCard>
+            <IonCard className="rounded-l-lg border-l-indigo-500">
               <IonCardHeader key={data.id}>
                 <IonCardTitle>{data.title}</IonCardTitle>
               </IonCardHeader>

@@ -1,23 +1,14 @@
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from "@ionic/react";
+import { IonContent, IonPage } from "@ionic/react";
 
 import "./Tab2.css";
 import FetchSingleAPI from "../components/API/FetchSingleAPI";
+import Navheader from "../components/NavHeader";
 
 const Tab2 = () => {
   return (
     <IonPage>
-      <IonHeader className="text-center">
-        <IonToolbar>
-          <IonTitle>Article</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
+      <IonContent>
+        <Navheader />
         <FetchSingleAPI />
       </IonContent>
     </IonPage>

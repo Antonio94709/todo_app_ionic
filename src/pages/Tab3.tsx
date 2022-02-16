@@ -1,22 +1,14 @@
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from "@ionic/react";
+import { IonContent, IonPage } from "@ionic/react";
 
 import "./Tab3.css";
+import NavHeader from "../components/NavHeader";
 
 const Tab3: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader className="text-center">
-        <IonToolbar>
-          <IonTitle>Settings</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen></IonContent>
+      <IonContent fullscreen>
+        <NavHeader />
+      </IonContent>
     </IonPage>
   );
 };
