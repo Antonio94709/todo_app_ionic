@@ -31,14 +31,18 @@ function FetchAPI() {
           </IonCardTitle>
         </IonCardHeader>
 
-        <IonCardContent className="">
+        <IonCardContent className="grid grid-cols-4 gap-4 sm:grid-cols-1">
           {data.map((data) => (
-            <IonCard className="rounded-l-lg border-l-indigo-500">
-              <IonCardHeader key={data.id}>
-                <IonCardTitle>{data.title}</IonCardTitle>
-              </IonCardHeader>
-              <IonCardContent>{data.body}</IonCardContent>
-            </IonCard>
+            <div key={data.id}>
+              <div class=" rounded-l-lg border-l-indigo-500 block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {data.title}
+                </h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">
+                  {data.body}
+                </p>
+              </div>
+            </div>
           ))}
         </IonCardContent>
       </IonCard>

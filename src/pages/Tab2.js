@@ -7,8 +7,8 @@ import Navheader from "../components/NavHeader";
 const Tab2 = () => {
   return (
     <IonPage>
+      <Navheader />
       <IonContent>
-        <Navheader />
         <FetchSingleAPI />
       </IonContent>
     </IonPage>

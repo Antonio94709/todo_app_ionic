@@ -18,7 +18,6 @@ import FetchAPI from "../components/API/FectAPI";
 import axios from "axios";
 import { useEffect } from "react";
 import NavHeader from "../components/NavHeader";
-import TailCard from "../components/TailCard";
 
 const Tab1 = () => {
   const [tasks, setTask] = useState([]);
@@ -59,8 +58,13 @@ const Tab1 = () => {
 
   return (
     <IonApp>
+      <NavHeader />
       <IonContent className=" mx-auto text-center">
-        <NavHeader />
+        {/* <IonFab vertical="top" horizontal="end" slot="fixed">
+          <IonFabButton>
+            <IonIcon icon={add} />
+          </IonFabButton>
+        </IonFab> */}
         <IonCard className="p-4">
           <IonGrid>
             <IonRow>
@@ -126,7 +130,7 @@ const Tab1 = () => {
             </IonList>
           </IonCardContent>
         </IonCard>
-        <TailCard />
+
         <FetchAPI />
       </IonContent>
     </IonApp>
