@@ -17,7 +17,6 @@ import { useState } from "react";
 import FetchAPI from "../components/API/FectAPI";
 import axios from "axios";
 import { useEffect } from "react";
-import NavHeader from "../components/NavHeader";
 
 const Tab1 = () => {
   const [tasks, setTask] = useState([]);
@@ -58,7 +57,6 @@ const Tab1 = () => {
 
   return (
     <IonApp>
-      <NavHeader />
       <IonContent className=" mx-auto text-center">
         {/* <IonFab vertical="top" horizontal="end" slot="fixed">
           <IonFabButton>
@@ -130,6 +128,51 @@ const Tab1 = () => {
             </IonList>
           </IonCardContent>
         </IonCard>
+
+        <div className="bg-blue-100 max-w-full mx-8 my-8  p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <div>
+            <div class="mb-6">
+              <input
+                type="text"
+                id="large-input"
+                onChange={(e) => {
+                  setItem(e.target.value);
+                }}
+                value={item}
+                class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center"
+                placeholder="Add Task"
+              />
+              <button
+                type="button"
+                onClick={addItemFu}
+                class="mx-8 my-8 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 "
+              >
+                Add Task
+              </button>
+            </div>
+            <div className="place-content-center">
+              {tasks.map((tasks) => (
+                <div
+                  key={tasks._id}
+                  className="place-content-center flex text-center mx-8 my-8 max-w-full rounded-full bg-white p-1"
+                >
+                  <h3 className="m-3 bg-blue-100 px-5 py-2.5 rounded-full">
+                    {tasks.todotask}
+                  </h3>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      removeItemFu(tasks._id);
+                    }}
+                    class="m-2 mr-3 p-3 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                  >
+                    Remove Task
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
         <FetchAPI />
       </IonContent>

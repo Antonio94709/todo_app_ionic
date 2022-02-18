@@ -8,14 +8,9 @@ import {
   IonCardContent,
   IonIcon,
   IonList,
-  IonChip,
-  IonAvatar,
   IonInput,
-  IonToggle,
-  IonRadio,
-  IonCheckbox,
 } from "@ionic/react";
-import { pin } from "ionicons";
+
 import { PhoneIcon } from "@heroicons/react/outline";
 
 export default function Example() {

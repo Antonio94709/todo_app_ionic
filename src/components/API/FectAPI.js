@@ -1,10 +1,3 @@
-import {
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardSubtitle,
-} from "@ionic/react";
 import React, { useEffect, useState } from "react";
 
 function FetchAPI() {

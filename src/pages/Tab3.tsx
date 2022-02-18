@@ -10,14 +10,12 @@ import {
 import { useState } from "react";
 
 import "./Tab3.css";
-import NavHeader from "../components/NavHeader";
 
 const Tab3: React.FC = () => {
   const [toppings, setToppings] = useState<string[]>([]);
   const [pets, setPets] = useState<string[]>(["bird", "dog"]);
   return (
     <IonPage>
-      <NavHeader />
       <IonContent>
         <IonItem>
           <IonLabel>Toppings</IonLabel>
