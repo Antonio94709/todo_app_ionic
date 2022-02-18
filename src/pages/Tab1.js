@@ -53,8 +53,8 @@ const Tab1 = () => {
           </IonFabButton>
         </IonFab> */}
         <NavHeader />
-        <div className="bg-blue-100 max-w-full mx-8 my-8  p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <div>
+        <div className="bg-blue-100 max-w-full mx-8 my-8  p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 place-content-center">
+          <div className="place-content-center max-w-full">
             <div class="mb-6">
               <input
                 type="text"
@@ -74,9 +74,12 @@ const Tab1 = () => {
                 Add Task
               </button>
             </div>
-            <div className="bg-white rounded-lg my-6">
+            <div className="bg-white rounded-lg my-6 ">
               {tasks.map((tasks) => (
-                <div key={tasks._id} className="flex place-content-center my-2">
+                <div
+                  key={tasks._id}
+                  className="border-l-4 border-l-blue-400 flex place-content-center my-2 md:border-b-4 border-b-blue-400"
+                >
                   <p className="mx-2 my-2 pt-2">{tasks.todotask}</p>
                   <button
                     type="button"

@@ -3,8 +3,8 @@ import React from "react";
 const NavHeader = () => {
   return (
     <div>
-      <nav class=" border-gray-200 mt-4 px-2 sm:px-4 py-6.5 rounded dark:bg-gray-800">
-        <div class=" bg-blue-100 rounded-md container flex flex-wrap justify-between items-center mx-auto">
+      <nav class=" border-gray-200 mt-4 p-4 sm:px-4 py-6.5 rounded dark:bg-gray-800">
+        <div class=" bg-blue-100 p-4 rounded-md container flex flex-wrap justify-between items-center mx-auto">
           <a href="https://www.youtube.com/" class="flex ml-6">
             <svg
               class="mr-3 h-10"
