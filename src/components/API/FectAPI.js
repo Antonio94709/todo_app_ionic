@@ -17,10 +17,10 @@ function FetchAPI() {
   return (
     <>
       <div className="bg-blue-100 max-w-full mx-8 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-        <div>
+        <div className="max-w-full">
           <img
-            className=" rounded-t-lg"
-            src="https://thumbs.dreamstime.com/b/planet-earth-globe-view-space-showing-realistic-earth-surface-world-map-as-outer-space-point-view-elements-211900228.jpg"
+            className=" rounded-t-lg "
+            src="https://wallpaperaccess.com/full/3310695.jpg"
             alt=""
           />
         </div>
