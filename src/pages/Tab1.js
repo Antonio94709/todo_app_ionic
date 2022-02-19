@@ -5,7 +5,6 @@ import { useState } from "react";
 import FetchAPI from "../components/API/FectAPI";
 import axios from "axios";
 import { useEffect } from "react";
-import NavHeader from "../components/NavHeader";
 
 const Tab1 = () => {
   const [tasks, setTask] = useState([]);
@@ -52,7 +51,7 @@ const Tab1 = () => {
             <IonIcon icon={add} />
           </IonFabButton>
         </IonFab> */}
-        <NavHeader />
+
         <div className="bg-blue-100 max-w-full mx-8 my-8  p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 place-content-center">
           <div className="place-content-center max-w-full">
             <div class="mb-6">
