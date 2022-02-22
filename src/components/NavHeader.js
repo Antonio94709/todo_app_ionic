@@ -15,7 +15,10 @@ const NavHeader = () => {
   return (
     <Router>
       <div>
-        <nav class="z-50 border-gray-200 mt-2 p-2 sm:px-4 py-6.5 rounded dark:bg-gray-800">
+        <nav
+          class=" border-gray-200 mt-2 p-2 sm:px-4 py-6.5 rounded dark:bg-gray-800"
+          style={{ zIndex: "4" }}
+        >
           <div class=" bg-blue-100 p-4 rounded-md container flex flex-wrap justify-between items-center mx-auto">
             <a as={Link} to={"/Tab1"} class="flex ml-6">
               <svg
