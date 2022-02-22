@@ -13,11 +13,11 @@ const Tab1 = () => {
   useEffect(() => {
     axios.get("https://todoappdatabase.herokuapp.com/get").then((response) => {
       setTask(response.data);
-    }, []);
+    });
     // axios.get("http://localhost:4000/tasks").then((response) => {
     //   setTask(response.data);
     // });
-  });
+  }, []);
 
   function removeItemFu(id) {
     axios.delete(`https://todoappdatabase.herokuapp.com/delete/${id}`);
